@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NoirishPage</title>
+    <script>
+        // This script fetches header.html and injects it into the page
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("../../NavBar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("site-header").innerHTML = data;
+                });
+        });
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="site-header"></div>
     <header>
         <h1>Noirish</h1>
     </header>
     <main>
-        <p>This is the page for all things Noirish</p>
+        <p>This is the page for all things Noirishh</p>
         <p>Edit <code>index.html</code> and <code>style.css</code> to change this page.</p>
     </main>
     <footer>
