@@ -3,21 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>My Site</title>
-    <script>
-    // This script fetches header.html and injects it into the page
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("NavBar.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("site-header").innerHTML = data;
-        });
-    });
-    </script>
+    {% include "NavBar.html" %}
 </head>
 <body>
     <div id="site-header"></div>
 
     <h1>Welcome! 2</h1>
     <p>This is the homepage.</p>
+    <h2>ah</h2>
 </body>
 </html>

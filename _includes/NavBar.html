@@ -1,0 +1,87 @@
+<style>
+  /* The outer navbar container – this is what becomes sticky */
+  .navbar-container {
+    background-color: #f8f8f8;        /* light background so content doesn't show through */
+    padding: 10px 20px;               /* some breathing room */
+    position: sticky;                 /* <-- This makes it follow scrolling */
+    top: 0;                           /* sticks to the very top */
+    z-index: 1000;                    /* stays on top of page content */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional subtle shadow */
+    text-align: left;
+  }
+
+  /* Keep dropdowns in a horizontal row */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;               /* space between top-level items */
+  }
+
+  .dropbtn {
+    font-size: 16px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .dropbtn:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+
+<div class="navbar-container">
+
+  <div class="dropdown">
+    <div class="dropbtn">
+    <a href="/index.html">Home</a>
+</div>
+</div>
+
+<div class="dropdown">
+    <div class="dropbtn"><a href="/Academic/AcademicPage/">Academic</a></div>
+    <div class="dropdown-content">
+            <a href="/Academic/AcademicPage/#Sciophobia">Sciophobia</a>
+            <a href="/Academic/AcademicPage/#Last Contact">Last Contact</a>
+        </div>
+</div>
+
+    <div class="dropdown">
+        <div class="dropbtn"><a href="/Personal/PersonalPage/">Personal</a></div>
+        <div class="dropdown-content">
+            <a href="/Personal/PersonalPage/#Noirish">Noirish</a>
+            <a href="/Personal/PersonalPage/#Excalibur Engine">Excalibur Engine</a>
+            <!--<a href="/Personal/PersonalPage/">Weave</a>-->
+        </div>
+    </div>
+
+</div>

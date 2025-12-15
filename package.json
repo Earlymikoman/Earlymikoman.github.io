@@ -1,0 +1,16 @@
+{
+  "name": "PortfolioWeebsite",
+  "version": "1.0.0",
+  "description": "My portfolio website.",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "npm run serve"
+  },
+  "author": "Xander Boosinger & Grok",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "type": "module"
+}
