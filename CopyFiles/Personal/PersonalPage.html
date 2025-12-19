@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal</title>
+    {% include "NavBar.html" %}
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <div id="site-header"></div>
+    
+    <main>
+
+        <section id="Noirish">
+        {% include "./Noirish/NoirishSection.html" %}
+        </section>
+
+        <section id="Excalibur Engine">
+        {% include "./Excalibur Engine/ExcaliburEngineSection.html" %}
+        </section>
+
+        <section id="Weave">
+        {% include "./Weave/WeaveSection.html" %}
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Xander Boosinger</p>
+    </footer>
+</body>
+
+</html>

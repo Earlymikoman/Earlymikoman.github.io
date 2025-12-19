@@ -2,14 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Site</title>
-    {% include "NavBar.html" %}
+    <title>Homepage</title>
 </head>
-<body>
-    <div id="site-header"></div>
 
-    <h1>Welcome! 2</h1>
-    <p>This is the homepage.</p>
-    <h2>ah</h2>
-</body>
+<style>
+  video {
+    display: block;      /* Required for margin auto to work */
+    margin: 0 auto;      /* Centers horizontally */
+    max-width: 100%;     /* Responsive on small screens */
+    height: auto;
+  }
+</style>
+
+{% include "NavBar.html" %}
+<div>
+    <body>
+
+        <div id="site-header"></div>
+
+        <h1 style="text-align: center;">
+            Xander Boosinger
+        </h1>
+        <p style="text-align: center;">
+            Phone: 541-606-9609 (Text Preferred)
+            <br>Email: xboosinger@gmail.com
+            <br>GitHub:
+             <a target="_blank" href="https://github.com/Earlymikoman">
+                Earlymikoman
+            </a>
+            <br>
+            <br>Hello, and welcome to my portfolio website! Use the navigation bar above
+             to view my various projects.
+            <br>
+            <br>Some Favorites:
+            <h2 style="text-align: center;">
+                <a href="/CopyFiles/Academic/AcademicPage/#Last Contact">Last Contact</a>
+            </h2>
+            <video controls width="800" height="450">
+                <source src="/CopyFiles/Academic/Last Contact/GAM150_LastContact_Trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <h2 style="text-align: center;">
+                <a href="/CopyFiles/Personal/PersonalPage/#Noirish">Noirish</a>
+            </h2>
+            <div style="width: 100%; max-width: 100%; max-height: 70%; container-type: inline-size; margin: 20px auto; background: #231F20;">
+                <iframe 
+                src="/CopyFiles/Personal/Noirish/Noirish Demo/index.html"
+                allowfullscreen
+                style="
+                    width: auto;
+                    height: 70%;
+                    aspect-ratio: 16 / 9;
+                    max-inline-size: 100%;
+                    max-block-size: 70vh;   /* Caps at 70% viewport height — change to 50vh for 50% */
+                    border: none;
+                    display: block;
+                    margin: 0 auto;
+                ">
+                Your browser doesn't support iframes. 
+                <a href="/CopyFiles/Personal/Noirish/Noirish Demo/index.html">Play directly here</a>.
+                </iframe>
+            </div>
+            <p style="text-align: center;">
+                Press the sideways green "E" to start. Press 'R' to reload your gun.
+            </p>
+        </p>
+
+    </body>
+</div>
 </html>

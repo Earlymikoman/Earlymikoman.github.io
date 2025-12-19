@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "My portfolio website.",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve",
+    "clean": "rimraf _site",
+    "build": "npm run clean && eleventy",
+    "serve": "npm run clean && eleventy --serve",
     "start": "npm run serve"
   },
   "author": "Xander Boosinger & Grok",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "rimraf": "^6.1.2"
   },
   "type": "module"
 }
