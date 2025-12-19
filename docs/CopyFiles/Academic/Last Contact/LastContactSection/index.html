@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  video {
+    display: block;      /* Required for margin auto to work */
+    margin: 0 auto;      /* Centers horizontally */
+    max-width: 100%;     /* Responsive on small screens */
+    height: auto;
+  }
+</style>
+
+<body>
+
+    <header>
+        <h1>Last Contact</h1>
+    </header>
+
+    <main>
+        <video controls width="800" height="450">
+            <source src="/CopyFiles/Academic/Last Contact/GAM150_LastContact_Trailer.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>
+            Last Contact was my freshman game project, developed by the team Mod2 in C++:
+            <ul>
+                <li>Xander Boosinger</li>
+                <li>Ori Balashov</li>
+                <li>Elliot Orr</li>
+                <li>Justin Ptacek</li>
+                <li>Aidan Hartman</li>
+            </ul>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;Last Contact being my first "real" project, a lot of our time was
+             spent designing a fairly basic engine; lots of figuring out needling
+             stuff like when to delete components,
+             how to do update/render layers, how to render, how to separate component
+             responsibilities cleanly.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;Aside from that though, my biggest tasks were to implement the
+             core mechanic, trains/tracks, and the user interface for placing those
+             as such. I had started the semester
+             thinking the trains would be easy, but I soon found that there were a
+             number of edge cases I had to watch for, and I was really trying
+             to get away with a any-time method;
+             effectively, determining the direction the train should go on tracks
+             based on the current status of both, rather than trying to maintain
+             some kind of record to help determine the direction.
+            <br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;The method I eventually went for to achieve was a bit
+             hacked-together, but wound up working very well for the final project,
+             and I'm not currently aware of any bugs
+             relating to this code at the moment. More annoying than this,
+             though, was the interface for placing the tracks; the UI itself
+             was mostly fine, some memory bugs here and there,
+             but what was really terrible was the logic for which way placed
+             tracks should be pointing; this involved a lot of recursive
+             searching in the tiles around the placed track,
+             and took quite a lot of debugging to iron out the kinks.
+             I believe there are definitely edge cases out there that
+             would cause weird behaviour, but I can't come up with a
+             specific example. I just know in my soul SOMETHING is probably broken.
+            <br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;I used FMOD for the game's audio, and since I'd never used FMOD
+             at all before it turned out pretty basic; pretty much, just PlaySound.
+             I did a little bit more to get the audio
+             to dropoff when the camera was far away from the source, but this was
+             really cobbled together. I also made the music and processed the SFX,
+             but the music was a bit janky and
+             SFX processing isn't all too interesting to write about here.
+
+            
+        </p>
+        <a href="/CopyFiles/Academic/Last Contact/LAST CONTACT Setup.zip" download>Installer Download</a>
+    </main>
+    
+</body>
+
+</html>

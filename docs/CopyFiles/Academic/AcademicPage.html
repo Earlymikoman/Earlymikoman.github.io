@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic</title>
+    {% include "NavBar.html" %}
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <div id="site-header"></div>
+    
+    <main>
+
+        <section id="Last Contact">
+        {% include "./Last Contact/LastContactSection.html" %}
+        </section>
+
+        <section id="Sciophobia">
+        {% include "./Sciophobia/SciophobiaSection.html" %}
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Xander Boosinger</p>
+    </footer>
+</body>
+
+</html>

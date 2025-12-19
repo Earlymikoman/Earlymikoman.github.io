@@ -12,7 +12,8 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: ".",      // default, your root
-      includes: "_includes"
+      includes: "_includes",
+      output: "docs"
     }
   };
 };

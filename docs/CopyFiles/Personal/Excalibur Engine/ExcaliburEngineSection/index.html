@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excalibur Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+    <header>
+        <h1>Excalibur Engine</h1>
+    </header>
+
+    <main>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Excalibur Engine is my homemade C++ engine I made over the summer to
+             further my understanding of engine architecture. My primary
+             goal with this engine was to be as efficient as possible; pure ECS,
+             interrupt messaging, anything I could think of that would minimize
+             unnecessary code as much as possible. For the most part this is now
+             abandonware, but much of what I did here will definitely be carried
+             over into my future projects, engine and no. One of the main general
+             tools I learned while developing Excalibur was templates, which I now
+             know that I love dearly. One such template class is the representative
+             data type of the engine, the
+             <a href="/Personal/Excalibur Engine/Jive.txt" download>
+                Jive
+            </a>
+            .
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;The Jive's purpose is to be the container for components; there were
+            two hard rules for its development:
+            <ol>
+                <li>Objects should be stored contiguously.</li>
+                <li>Pointers to the contents of the Jive should never become invalid.</li>
+            </ol>
+            &nbsp;&nbsp;&nbsp;&nbsp;These rules naturally lead to some other properties; objects inside the Jive
+             never move, or else rule 2 would be broken, and since they never move, to
+             iterate over them one must maintain a "recipe" for which of its contents are
+             currently active. Additionally, since they are contiguous, the Jive is
+             very fast at iteration for cache coherency, but also at deletion and
+             insertion, particularly in a linear fashion (i.e., deleting from the
+             front and pushing to the back at a constant rate is ideal).
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;Additionally, so as to provide safety for the user, I did decide to allow
+             the Jive to grow, just not through reallocation (rule 2), but by maintaining
+             template-argument-sized arrays in a vector, which is admittedly technically
+             not as fast as being strict about a "Component Cap" would let it be, but
+             it seemed a minimal loss for dynamacism.
+            <br>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;The messaging system for Excalibur is also a bit outdated now, as I was
+             using type-erased void pointers to pass my arbitrary messages, but I now
+             know I can templatize the message handlers to allow for much easier and
+             safer use. It is slightly annoying to have to define a type for each message,
+             but them's the breaks I suppose. Could be solved through macros or pre-build
+             steps, I would think.
+        </p>
+    </main>
+    
+</body>
+
+</html>

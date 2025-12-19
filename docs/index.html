@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+
+<style>
+  video {
+    display: block;      /* Required for margin auto to work */
+    margin: 0 auto;      /* Centers horizontally */
+    max-width: 100%;     /* Responsive on small screens */
+    height: auto;
+  }
+</style>
+
+<style>
+  /* The outer navbar container – this is what becomes sticky */
+  .navbar-container {
+    background-color: #f8f8f8;        /* light background so content doesn't show through */
+    padding: 10px 20px;               /* some breathing room */
+    position: sticky;                 /* <-- This makes it follow scrolling */
+    top: 0;                           /* sticks to the very top */
+    z-index: 1000;                    /* stays on top of page content */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional subtle shadow */
+    text-align: left;
+  }
+
+  /* Keep dropdowns in a horizontal row */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;               /* space between top-level items */
+  }
+
+  .dropbtn {
+    font-size: 16px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .dropbtn:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+
+<div class="navbar-container">
+
+  <div class="dropdown">
+    <div class="dropbtn">
+    <a href="/index.html">Home</a>
+</div>
+</div>
+
+<div class="dropdown">
+    <div class="dropbtn"><a href="/CopyFiles/Academic/AcademicPage/">Academic</a></div>
+    <div class="dropdown-content">
+      <a href="/CopyFiles/Academic/AcademicPage/#Last Contact">Last Contact</a>
+      <a href="/CopyFiles/Academic/AcademicPage/#Sciophobia">Sciophobia</a>
+    </div>
+</div>
+
+    <div class="dropdown">
+        <div class="dropbtn"><a href="/CopyFiles/Personal/PersonalPage/">Personal</a></div>
+        <div class="dropdown-content">
+            <a href="/CopyFiles/Personal/PersonalPage/#Noirish">Noirish</a>
+            <a href="/CopyFiles/Personal/PersonalPage/#Excalibur Engine">Excalibur Engine</a>
+            <!--<a href="/Personal/PersonalPage/">Weave</a>-->
+        </div>
+    </div>
+
+</div>
+<div>
+    <body>
+
+        <div id="site-header"></div>
+
+        <h1 style="text-align: center;">
+            Xander Boosinger
+        </h1>
+        <p style="text-align: center;">
+            Phone: 541-606-9609 (Text Preferred)
+            <br>Email: xboosinger@gmail.com
+            <br>GitHub:
+             <a target="_blank" href="https://github.com/Earlymikoman">
+                Earlymikoman
+            </a>
+            <br>
+            <br>Hello, and welcome to my portfolio website! Use the navigation bar above
+             to view my various projects.
+            <br>
+            <br>Some Favorites:
+            <h2 style="text-align: center;">
+                <a href="/CopyFiles/Academic/AcademicPage/#Last Contact">Last Contact</a>
+            </h2>
+            <video controls width="800" height="450">
+                <source src="/CopyFiles/Academic/Last Contact/GAM150_LastContact_Trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <h2 style="text-align: center;">
+                <a href="/CopyFiles/Personal/PersonalPage/#Noirish">Noirish</a>
+            </h2>
+            <div style="width: 100%; max-width: 100%; max-height: 70%; container-type: inline-size; margin: 20px auto; background: #231F20;">
+                <iframe 
+                src="/CopyFiles/Personal/Noirish/Noirish Demo/index.html"
+                allowfullscreen
+                style="
+                    width: auto;
+                    height: 70%;
+                    aspect-ratio: 16 / 9;
+                    max-inline-size: 100%;
+                    max-block-size: 70vh;   /* Caps at 70% viewport height — change to 50vh for 50% */
+                    border: none;
+                    display: block;
+                    margin: 0 auto;
+                ">
+                Your browser doesn't support iframes. 
+                <a href="/CopyFiles/Personal/Noirish/Noirish Demo/index.html">Play directly here</a>.
+                </iframe>
+            </div>
+            <p style="text-align: center;">
+                Press the sideways green "E" to start. Press 'R' to reload your gun.
+            </p>
+        </p>
+
+    </body>
+</div>
+</html>
